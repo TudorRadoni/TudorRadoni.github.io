@@ -48,8 +48,8 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #d2dae1;
-  --bs-body-bg: #1a1b1f;
+  /*--bs-body-color: #d2dae1;*/
+  /*--bs-body-bg: #1a1b1f;*/
 }
 
 .card {
