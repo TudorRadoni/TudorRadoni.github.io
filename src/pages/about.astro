@@ -1,0 +1,175 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Tudor Rădoni" description="About Tudor Rădoni">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/at-work.png"
+					alt="Tudor Rădoni at work with a colleague"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						In the course of 1.5 months, with the help of skilled mentors and a passionate team,
+						I have built a product from the ground up and went through the following stages:
+						circuit implementation on breadboard and testing in simulation (LTSpice and Falstad),
+						schematic and PCB layout design, HDL (Verilog) on Zynq Zybo Z7, Linux kernel drivers in C,
+						high-level IIO applications using C and Python.
+					</p><br>
+					<p>
+						TODO: Add bachelor's thesis description
+					</p><br>
+					<p>
+						TODO: Add various other projects
+					</p><br>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<p><strong>Technical University of Cluj-Napoca</strong><br>
+					<em>2020 - Present | Cluj-Napoca, Cluj, Romania</em><br>
+					I am currently studying <strong>Automation & System Engineering</strong>
+					at the Technical University of Cluj-Napoca. Focused on the practical aspects
+					of leveraging technology for efficient systems.</p>
+					<br>
+					<p><strong>I. C. Brătianu Hațeg National College</strong><br>
+					<em>2016 - 2020 | Hațeg, Hunedoara, Romania</em><br>
+					High school years at I. C. Brătianu Hațeg National College were dedicated to the
+					<strong>Mathematics-Informatics Class</strong>. This period laid the groundwork
+					for analytical thinking and a solid grasp of mathematics, physics and programming,
+					providing a foundation for my current studies.</p>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p><strong>Win32 API</strong><br>
+					I have built a few Windows apps (with C++) using this API and got to like it.
+					I feel like it is simple enough to quickly make a program,
+					but also complex enough to enable flexibility. 💻</p>
+					<br>
+					<p><strong>Terminal Fan</strong><br>
+					Knowing how to type a few command is, surely, not much, but being able to write
+					🐚 scripts and use command line tools makes things so easy sometimes.</p>
+					<br>
+					<p><strong>Photography</strong><br>
+					Ever since I was a kid, 📸 was something that fascinated me.
+					I always used to take pictures of everything, from the most
+					epic sunset to the most basic coffee cup. Nothing's changed!</p>
+					<br>
+					<p><strong>Coffee</strong><br>
+					My passion for ☕started in 2020, when I saw a perfect espresso shot
+					beautifully flow into the most amazing latte art.
+					I knew I had to try latte art, so here we are: @lattecrafter</p>
+					<br>
+					<p><strong>Music</strong><br>
+					When I was little, I would knock on things (as knocking at a door) to see what
+					sounds they make. Later, I discovered the 🎹 and then
+					the 🎸and then fell in love with music! Later, I got into 🎛️ DJing. </p>
+					<br>
+					<p><strong>Gaming (very badly)</strong><br>
+					I once saw my dad playing a game and I wanted to try.
+					I couldn't let go of the 🎮 ever since. One would say I must be pretty good,
+					but, in reality, I straight up suck at video games 😅</p>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Languages</h2>
+				<div class="content">
+					<ul>
+						<li>
+							<strong>English</strong>
+							<p>Holder of the Cambridge C1 (Advanced) English Certificate, demonstrating proficiency in both written and spoken communication.</p>
+						</li><br>
+						<li>
+							<strong>Romanian</strong>
+							<p>Native language speaker, fluent in Romanian.</p>
+						</li><br>
+						<li>
+							<strong>French</strong>
+							<p>Hold a B2 (Intermediate) Certificate in French, indicating a solid foundation in the language for basic communication.</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+		</main>
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
