@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+import ImageLinkCard from '../components/ImageLinkCard.astro';
+import Hero from '../components/Hero.astro';
+import Grid from '../components/Grid.astro';
+
+const sections = [
+    {
+        title: '3D Renders',
+        links: [
+            { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/art/3D_renders/Donuts.png', alt: 'Tasty Donuts 🍩' },
+            { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/art/3D_renders/PillarFormation.png', alt: 'Pillar Formation 🪨' },
+            // { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/art/3D_renders/Oreo.png', alt: 'Oreo 🥛' },
+        ],
+    },
+    {
+        title: 'Video Editing',
+        links: [
+            { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/art/Videos/ChocoTulip.png', alt: 'Stacked Tulip with Chocolate 🌷🍫' },
+            { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/art/Videos/IcedLatte.png', alt: 'Iced Latte 🧊☕🥛' },
+            { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/art/Videos/Petra.jpg', alt: 'Cozy Cappuccino ☕🥛' },
+            { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/work/lattecrafter.png', alt: 'Smoky Rosetta 🌫️' },
+        ],
+    },
+    {
+        title: 'The rest of this page is under construction! ⚠️',
+        links: [
+            // { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/stock-1.jpg', alt: 'Example' },
+            // { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/stock-2.jpg', alt: 'Example' },
+            // { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/stock-3.jpg', alt: 'Example' },
+            // { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/stock-4.jpg', alt: 'Example' },
+        ],
+    },
+    // {
+    //     title: 'Graphics',
+    //     links: [
+    //         { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/stock-1.jpg', alt: 'Example' },
+    //         { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/stock-2.jpg', alt: 'Example' },
+    //         { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/stock-3.jpg', alt: 'Example' },
+    //         { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/stock-4.jpg', alt: 'Example' },
+    //     ],
+    // },
+    // {
+    //     title: 'Logos',
+    //     links: [
+    //         { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/stock-1.jpg', alt: 'Example' },
+    //         { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/stock-2.jpg', alt: 'Example' },
+    //         { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/stock-3.jpg', alt: 'Example' },
+    //         { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/stock-4.jpg', alt: 'Example' },
+    //     ],
+    // },
+    // {
+    //     title: 'Mockups',
+    //     links: [
+    //         { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/stock-1.jpg', alt: 'Example' },
+    //         { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/stock-2.jpg', alt: 'Example' },
+    //         { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/stock-3.jpg', alt: 'Example' },
+    //         { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/stock-4.jpg', alt: 'Example' },
+    //     ],
+    // },
+    // {
+    //     title: 'Edits',
+    //     links: [
+    //         { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/stock-1.jpg', alt: 'Image 1' },
+    //         { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/stock-2.jpg', alt: 'Image 1' },
+    //         { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/stock-3.jpg', alt: 'Image 1' },
+    //         { url: 'https://www.instagram.com/lattecrafter/', img: '/assets/stock-4.jpg', alt: 'Image 1' },
+    //     ],
+    // },
+];
+---
+
+<BaseLayout
+    title="Art Showcase | Tudor Rădoni"
+    description="Learn about Tudor Rădoni's most recent creations"
+>
+    <div class="stack gap-20">
+        <main class="wrapper stack gap-8">
+            <Hero
+                title="Art canvas"
+                tagline="Get a glimpse of my creations, such as 3D renders, graphics, logos, mockups, edits and more."
+                align="start"
+            />
+            {
+                sections.map((section) => (
+                    <>
+                        <h2>{section.title}</h2>
+                        <Grid variant="offset">
+                            {
+                                section.links.map((link) => (
+                                    <li>
+                                        <ImageLinkCard link={link} />
+                                    </li>
+                                ))
+                            }
+                        </Grid>
+                    </>
+                ))
+            }
+        </main>
+        <ContactCTA />
+    </div>
+</BaseLayout>
