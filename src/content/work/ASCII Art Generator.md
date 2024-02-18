@@ -1,8 +1,8 @@
 ---
 title: ASCII Art Generator
 publishDate: 2022-10-17 14:32:44
-img: /assets/aag.jpg
-img_alt: Soft pink and baby blue water ripples together in a subtle texture.
+img: /assets/work/asciiart.png
+img_alt: ASCII Art Generator Logo.
 description: |
   A simple ASCII art generator that I made in an hour. It's very basic, but really fun to play around with. Also, it's simple and easy to modify.
 tags:

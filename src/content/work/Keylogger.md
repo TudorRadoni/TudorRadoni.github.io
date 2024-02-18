@@ -1,7 +1,7 @@
 ---
 title: Keylogger
 publishDate: 2023-05-14 12:34:56
-img: /assets/keylogger.jpg
+img: /assets/work/keylogger.png
 img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
 description: |
   The Keylogger is a project I have made for fun. It consists of the main keylogger, which is written in C++, and an interpreter, which is written in Python. The interpreter is used to read the logs and display them in a more readable format.

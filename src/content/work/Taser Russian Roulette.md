@@ -1,7 +1,7 @@
 ---
 title: Taser Russian Roulette
 publishDate: 2022-11-10 19:42:55
-img: /assets/trr.jpg
+img: /assets/work/trr.jpg
 img_alt: Arduino with a shocking gum attached to it.
 description: |
   As a university project, Taser Russian Roulette is a game that I made using an Arduino Pro Micro, a shocking gum, a button, and an RFID module. The game is as fun as the real deal, but without the risk of dying... 👀

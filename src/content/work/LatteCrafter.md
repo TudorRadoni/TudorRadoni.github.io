@@ -1,7 +1,7 @@
 ---
 title: LatteCrafter
 publishDate: 2023-12-26 21:16:47
-img: /assets/lattecrafter.png
+img: /assets/work/lattecrafter.png
 img_alt: A smoky rosetta latte art.
 description: |
   One of my passions is making latte art and documenting it through photos and videos. Therefore, I created a coffee canvas where I can share my creations with the world. ☕
