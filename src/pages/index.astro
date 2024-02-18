@@ -78,6 +78,27 @@ const projects = (await getCollection('work'))
 					</CallToAction>
 				</div>
 			</section>
+			<section class="section with-background bg-variant">
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h3>Other Stuff</h3>
+					<p>
+						I love making things. Therefore, here are some cool things I've made and which I keep on making.
+						Consider checking out the <a href="/art/">art</a> section for more.
+					</p>
+				</header>
+
+				<div class="gallery">
+					<Grid variant="small">
+						{
+							['LatteCrafter', '3D Renders', 'Graphics', 'i will put some', 'photos in these cards'].map((coolStuff) => (
+								<li class="mention-card">
+									<p>{coolStuff}</p>
+								</li>
+							))
+						}
+					</Grid>
+				</div>
+			</section>
 			<!-- <section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Mentions</h3>
